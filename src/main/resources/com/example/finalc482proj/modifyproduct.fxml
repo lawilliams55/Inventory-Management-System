@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalc482proj.modifyproductcontroller">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="searchPartsField" layoutX="806.0" layoutY="18.0" onAction="#searchPartsFieldAction" prefHeight="26.0" prefWidth="180.0" promptText="Search by part ID or Name" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TableView fx:id="partTableView" layoutX="638.0" layoutY="68.0" prefHeight="169.0" prefWidth="348.0" AnchorPane.rightAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="partIdColumn" prefWidth="58.39996337890625" text="Part ID" />
+          <TableColumn fx:id="partNameColumn" prefWidth="72.79998779296875" text="Part Name" />
+            <TableColumn fx:id="partInventoryColumn" prefWidth="95.20001220703125" text="Inventory Level" />
+            <TableColumn fx:id="partPriceColumn" prefWidth="121.20001220703125" text="Price/Cost Per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="associatedPartTableView" layoutX="638.0" layoutY="310.0" prefHeight="200.0" prefWidth="348.0" AnchorPane.rightAnchor="10.0">
+         <columns>
+            <TableColumn fx:id="associatedPartIdColumn" prefWidth="55.199951171875" text="Part ID" />
+            <TableColumn fx:id="associatedPartNameColumn" prefWidth="72.60003662109375" text="Part Name" />
+            <TableColumn fx:id="associatedPartInventoryColumn" prefWidth="104.5999755859375" text="Inventory Level" />
+            <TableColumn fx:id="associatedPartPriceColumn" prefWidth="115.5999755859375" text="Price/Cost Per Unit" />
+         </columns>
+      </TableView>
+      <Button layoutX="839.0" layoutY="550.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" AnchorPane.rightAnchor="10.0" />
+      <Button layoutX="932.0" layoutY="237.0" mnemonicParsing="false" onAction="#addButtonAction" text="Add" AnchorPane.rightAnchor="10.0" />
+      <Button layoutX="830.0" layoutY="550.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" AnchorPane.rightAnchor="116.39999999999998" />
+      <Button layoutX="732.0" layoutY="510.0" mnemonicParsing="false" onAction="#removeButtonAction" text="Remove Associated part" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="productIdText" editable="false" layoutX="157.0" layoutY="143.0">
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="productNameText" layoutX="157.0" layoutY="214.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="productMinText" layoutX="406.0" layoutY="441.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="productPriceText" layoutX="157.0" layoutY="361.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="productMaxText" layoutX="157.0" layoutY="438.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="productInventoryText" layoutX="157.0" layoutY="287.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
+      <Text layoutX="111.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="365.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text layoutX="110.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Text layoutX="111.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <Text layoutX="111.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+      <Text layoutX="111.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

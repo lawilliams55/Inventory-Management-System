@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalc482proj.addpartcontroller">
+   <children>
+      <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add part" AnchorPane.topAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="partInHouseButton" layoutX="127.0" layoutY="15.0" mnemonicParsing="false" onAction="#inHouseRadioButtonAction" selected="true" text="In-House" AnchorPane.topAnchor="16.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="partToggleType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="partOutSourcedButton" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#outSourcedRadioButtonAction" text="Outsourced" toggleGroup="$partToggleType" AnchorPane.topAnchor="16.0" />
+      <Text layoutX="61.0" layoutY="78.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" AnchorPane.topAnchor="64.0" />
+      <Text layoutX="61.0" layoutY="239.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" AnchorPane.topAnchor="264.0" />
+      <Text fx:id="partMachineIdField" layoutX="61.0" layoutY="327.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" AnchorPane.topAnchor="324.0" />
+      <Text layoutX="290.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" AnchorPane.topAnchor="264.0" />
+      <Text layoutX="60.0" layoutY="122.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" AnchorPane.topAnchor="114.0" />
+      <Text layoutX="61.0" layoutY="196.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" AnchorPane.topAnchor="214.0" />
+      <Text layoutX="59.0" layoutY="162.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" AnchorPane.topAnchor="164.0" />
+      <TextField fx:id="partIdField" disable="true" layoutX="127.0" layoutY="61.0" AnchorPane.topAnchor="60.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="partNameField" layoutX="127.0" layoutY="105.0" AnchorPane.topAnchor="110.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="partInventoryField" layoutX="127.0" layoutY="145.0" AnchorPane.topAnchor="160.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="partPriceField" layoutX="127.0" layoutY="179.0" AnchorPane.topAnchor="210.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="partMaxField" layoutX="127.0" layoutY="222.0" AnchorPane.topAnchor="260.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="partMinField" layoutX="321.0" layoutY="222.0" AnchorPane.topAnchor="260.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <Button layoutX="290.0" layoutY="347.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+      <Button layoutX="361.0" layoutY="347.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
+      <TextField fx:id="partMachineTextField" layoutX="155.0" layoutY="319.0" prefHeight="27.0" prefWidth="110.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>
